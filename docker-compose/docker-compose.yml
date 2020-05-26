@@ -19,7 +19,7 @@ services:
                 -Ddb.driver=org.postgresql.Driver
                 -Ddb.username=alfresco
                 -Ddb.password=alfresco
-                -Ddb.url=jdbc:postgresql://postgres:5432/alfresco
+                -Ddb.url=jdbc:postgresql://postgres:7979/alfresco
                 -Dsolr.host=solr6
                 -Dsolr.port=8983
                 -Dsolr.secureComms=none
@@ -117,7 +117,7 @@ services:
             - POSTGRES_DB=alfresco
         command: postgres -c max_connections=300 -c log_min_messages=LOG
         ports:
-            - 5432:5432
+            - 7979:5432
 
     solr6:
         image: alfresco/alfresco-search-services:1.4.2
